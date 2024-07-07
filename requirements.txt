@@ -1,0 +1,12 @@
+langchain
+langchain-core
+langchain-experimental
+openai==0.28.0
+wasabi
+watchdog
+scikit-learn
+python-dotenv
+python-docx
+python-decouple
+sentence-transformers
+faiss-cpu
