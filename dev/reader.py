@@ -5,7 +5,7 @@ import numpy as np
 
 model = SentenceTransformer('all-MiniLM-L6-v2')
 
-with open("correct_answer.json", "r") as file:
+with open("../correct_answer.json", "r") as file:
     data = json.load(file)
     questions = [entry["question"] for entry in data]
     answers = [entry["answer"] for entry in data]

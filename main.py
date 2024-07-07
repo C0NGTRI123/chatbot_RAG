@@ -36,14 +36,15 @@ if user_query is not None and user_query.strip() != "":
         st.markdown(user_query)
 
     with st.chat_message("AI"):
-        folder_path = r"C:\Users\congt\Desktop\test\drive-download-20240705T165934Z-001"
-        file_path_list = [os.path.join(folder_path, file) for file in os.listdir(folder_path)]
+        # folder_path = r"C:\Users\congt\Desktop\test\drive-download-20240705T165934Z-001"
+        # file_path_list = [os.path.join(folder_path, file) for file in os.listdir(folder_path)]
+        file_path_list = []
         response_conv_turn = PDFService(file_path=file_path_list,
                                         query=user_query,
                                         mode="semantic",
                                         search_rank=25,
                                         rerank_rank=3,
-                                        save_path=r"C:\Users\congt\Desktop\chatbot\chatbot\dev\vector_database.index").extract()
+                                        save_path="vector_database.index").extract()
         response = response_conv_turn
         st.markdown(response)
 

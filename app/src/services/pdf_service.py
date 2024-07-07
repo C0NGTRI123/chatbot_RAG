@@ -24,8 +24,11 @@ class PDFService(object):
         if os.path.exists(self.save_path):
             index = load_faiss_index(self.save_path)
             chunks = []
-            for i in range(0, len(os.listdir(os.path.join(os.path.dirname(self.save_path), "chunks")))):
-                with open(os.path.join(os.path.dirname(self.save_path), f"chunks/chunk_{i}.txt"), "r", encoding="utf-8") as f:
+            # for i in range(0, len(os.listdir(os.path.join(os.path.dirname(self.save_path), "chunks")))):
+            #     with open(os.path.join(os.path.dirname(self.save_path), f"chunks/chunk_{i}.txt"), "r", encoding="utf-8") as f:
+            #         chunks.append(f.read())
+            for i in range(0, len(os.listdir("chunks"))):
+                with open(f"chunks/chunk_{i}.txt", "r", encoding="utf-8") as f:
                     chunks.append(f.read())
         else:
             text = BasicReader(self.file_path).load()
@@ -38,7 +41,7 @@ class PDFService(object):
                     os.makedirs(os.path.join(os.path.dirname(self.save_path), "chunks"))
                 with open(os.path.join(os.path.dirname(self.save_path), f"chunks/chunk_{i}.txt"), "w") as f:
                     f.write(chunk)
-        with open(r"C:\Users\congt\Desktop\chatbot\chatbot\dev\correct_answer.json", "r", encoding="utf-8") as file:
+        with open("correct_answer.json", "r", encoding="utf-8") as file:
             data = json.load(file)
             questions = [entry["question"] for entry in data]
             answers = [entry["answer"] for entry in data]

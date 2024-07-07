@@ -1,0 +1,54 @@
+Bảo vệ Cơ sở dữ liệu quốc gia về dân cư và Cơ sở dữ liệu căn cước  
+1. Cơ quan quản lý căn cước có trách nhi ệm sau đây:  
+a) Ứng dụng công ngh ệ thông tin để nhập, xử lý và kết xuất thông tin v ề dân 
+cư và căn cước bảo đảm an toàn d ữ liệu theo đúng các nguyên t ắc, định dạng các 
+hệ quản trị cơ sở dữ liệu; 
+b) Bảo đảm an toàn các thi ết bị thu thập, lưu trữ, truyền đưa, xử lý, trao đổi 
+thông tin v ề dân cư và căn cước; 
+c) Bảo vệ dữ liệu cá nhân, an ninh thông tin v ề dân cư và căn cước trên mạng 
+máy tính; b ảo đảm an toàn thông tin l ưu trữ trong cơ sở dữ liệu; phòng, ch ống các 
+hành vi truy nh ập, sử dụng trái phép, làm h ư hỏng Cơ sở dữ liệu quốc gia về dân 
+cư và Cơ sở dữ liệu căn cước. 2. Cơ sở dữ liệu quốc gia về dân cư và Cơ sở dữ liệu căn cước được lưu trữ 
+trên thiết bị lưu trữ đã được thực hiện các biện pháp ch ống truy nh ập trái phép 
+thông qua h ệ thống bảo mật của hệ quản trị cơ sở dữ liệu và hệ điều hành mạng. Chương VI 
+QUẢN LÝ NHÀ N ƯỚC VỀ CĂN CƯỚC, CƠ SỞ DỮ LIỆU QUỐC GIA  
+VỀ DÂN CƯ, CƠ SỞ DỮ LIỆU CĂN CƯỚC, ĐỊNH DANH  
+VÀ XÁC TH ỰC ĐIỆN TỬ 
+ 
+Điều 40. Trách nhi ệm quản lý nhà n ước về căn cước, Cơ sở dữ liệu quốc gia 
+về dân cư, Cơ sở dữ liệu căn cước, định danh và xác th ực điện tử 
+
+ 
+ CÔNG BÁO/S ố 35 + 36/Ngày 08-01-2024  59 
+ 
+1. Chính ph ủ thống nhất quản lý nhà n ước về căn cước, Cơ sở dữ liệu quốc gia 
+về dân cư, Cơ sở dữ liệu căn cước, định danh và xác th ực điện tử. 2. Bộ Công an là c ơ quan đầu mối giúp Chính ph ủ thực hiện quản lý nhà n ước 
+về căn cước, Cơ sở dữ liệu quốc gia về dân cư, Cơ sở dữ liệu căn cước, định danh 
+và xác thực điện tử. Điều 41. Trách nhi ệm của Bộ Công an  
+1. Ban hành theo th ẩm quyền hoặc trình cơ quan có th ẩm quyền ban hành v ăn 
+bản quy phạm pháp lu ật về căn cước, Cơ sở dữ liệu quốc gia về dân cư, Cơ sở dữ 
+liệu căn cước, định danh và xác th ực điện tử. 2. Tổ chức phổ biến, giáo dục pháp luật và tổ chức thực hiện các văn bản quy 
+phạm pháp lu ật về căn cước, Cơ sở dữ liệu quốc gia về dân cư, Cơ sở dữ liệu căn 
+cước, định danh và xác th ực điện tử. 3. Kiến nghị cấp có thẩm quyền bãi bỏ, đình chỉ việc thi hành ho ặc bãi bỏ theo 
+thẩm quyền văn bản quy phạm pháp lu ật về căn cước, Cơ sở dữ liệu quốc gia về 
+dân cư, Cơ sở dữ liệu căn cước, định danh và xác th ực điện tử của cơ quan, tổ chức, 
+cá nhân trái v ới quy định của Luật này. 4. Xây dựng, trình Chính ph ủ quy định về việc xác lập, hủy, xác lập lại số định 
+danh cá nhân; c ấp, quản lý tài kho ản định danh điện tử, xác thực điện tử; sao lưu, 
+phục hồi dữ liệu quốc gia về dân cư và căn cước. 5. Ban hành bi ểu mẫu dùng trong qu ản lý căn cước, Cơ sở dữ liệu quốc gia về 
+dân cư, Cơ sở dữ liệu căn cước, định danh và xác th ực điện tử; quy định về quản lý 
+tàng thư căn cước; quy định về thỏa thuận sử dụng ứng dụng định danh qu ốc gia. 6. Tổ chức sản xuất, cấp, quản lý thẻ căn cước, giấy chứng nhận căn cước, ứng 
+dụng khoa h ọc kỹ thuật bảo an, chống làm gi ả thẻ căn cước, giấy chứng nhận căn 
+cước; bảo đảm cơ sở vật chất, trang thi ết bị, công ngh ệ để sản xuất thẻ căn cước, 
+giấy chứng nhận căn cước. 7. Xây dựng, quản lý, bảo vệ, vận hành hệ thống định danh và xác th ực điện 
+tử; ứng dụng tài kho ản định danh điện tử vào công tác qu ản lý nhà n ước, cải cách 
+hành chính, phòng, ch ống thiên tai, d ịch bệnh. 8. Tổ chức xây dựng, quản lý, vận hành nền tảng định danh và xác th ực điện 
+tử; chủ trì, phối hợp với Bộ, cơ quan ngang B ộ, cơ quan thu ộc Chính ph ủ trong 
+liên thông các c ơ sở dữ liệu quốc gia, cơ sở dữ liệu chuyên ngành ph ục vụ việc tích 
+hợp thông tin, c ấp tài khoản định danh điện tử. 60 CÔNG BÁO/S ố 35 + 36/Ngày 08-01-2024  
+  
+9. Kết nối, tích hợp hệ thống định danh và xác th ực điện tử với nền tảng định 
+danh và xác th ực điện tử của cổng dịch vụ công phục vụ giải quyết thủ tục hành 
+chính, cung c ấp dịch vụ công trực tuyến theo quy định của pháp luật. 10. Quản lý Cơ sở dữ liệu quốc gia về dân cư, Cơ sở dữ liệu căn cước, hệ 
+thống định danh và xác th ực điện tử; chỉ đạo, hướng dẫn nghiệp vụ về quản lý căn 
+cước, Cơ sở dữ liệu quốc gia về dân cư, Cơ sở dữ liệu căn cước, hệ thống định 
+danh và xác th ực điện tử. 11.
