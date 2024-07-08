@@ -6,12 +6,7 @@ import openai
 
 st.set_page_config(page_title="Chat", page_icon=":speech_balloon:")
 
-with st.sidebar:
-    openai_api_key = st.text_input(
-        "OpenAI API Key", key="langchain_search_api_key_openai", type="password"
-    )
-
-    openai.api_key = openai_api_key
+openai.api_key = st.secrets["OPENAI_API_KEY"]
 
 
 if "conversation_history" not in st.session_state:
