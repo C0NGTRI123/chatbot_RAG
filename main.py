@@ -1,7 +1,6 @@
 import streamlit as st
 from langchain_core.messages import AIMessage, HumanMessage
 from app.src.services.pdf_service import PDFService
-import os
 import openai
 
 st.set_page_config(page_title="Chat", page_icon=":speech_balloon:")
@@ -41,6 +40,7 @@ if user_query is not None and user_query.strip() != "":
                                         rerank_rank=3,
                                         save_path="vector_database.index").extract()
         response = response_conv_turn
-        st.markdown(response)
+        response = response.replace("\n", "<br>")
+        st.markdown(response, unsafe_allow_html=True)
 
     st.session_state.conversation_history.append(AIMessage(content=response))
