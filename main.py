@@ -2,7 +2,49 @@ import streamlit as st
 from langchain_core.messages import AIMessage, HumanMessage
 from app.src.services.pdf_service import PDFService
 import openai
+import streamlit.components.v1 as components
+import base64
 
+
+def get_base64_image(image_path):
+    with open(image_path, "rb") as img_file:
+        return base64.b64encode(img_file.read()).decode()
+
+
+background_image = get_base64_image("img/tg_image_1984667092.png")
+overlay_image = get_base64_image("img/LOGO2.png")
+
+html_content = f"""
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .image-container {{
+            position: relative;
+            display: inline-block;
+        }}
+        .image-container img {{
+            display: block;
+        }}
+        .overlay {{
+            position: absolute;
+            top: 0;
+            left: 0;
+            max-width: 462px;
+            margin-top: 20px;
+        }}
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img src="data:image/png;base64,{background_image}" alt="Background Image">
+        <img src="data:image/png;base64,{overlay_image}" class="overlay" alt="Overlay Image">
+    </div>
+</body>
+</html>
+"""
 
 # Create a css style for the chatbot
 center_elements_css = """
@@ -29,19 +71,6 @@ right_elements_css = """
 </style>
 """
 
-# Add custom CSS to set the background color
-colors_css = """
-<style>
-.main {
-  background-color: linear-gradient(to right, green 33.33%, white 33.33%);;
-}
-.white-font {
-    color: white;
-}
-</style>
-"""
-
-
 st.set_page_config(page_title="Hỏi và đáp", page_icon=":speech_balloon:")
 openai.api_key = st.secrets["OPENAI_API_KEY"]
 
@@ -49,26 +78,20 @@ openai.api_key = st.secrets["OPENAI_API_KEY"]
 st.markdown(center_elements_css, unsafe_allow_html=True)
 st.markdown(left_elements_css, unsafe_allow_html=True)
 st.markdown(right_elements_css, unsafe_allow_html=True)
-st.markdown(colors_css, unsafe_allow_html=True)
 
 if "conversation_history" not in st.session_state:
     st.session_state.conversation_history = [
         AIMessage(content="Xin chào tôi là trợ lý thông minh. Tôi có thể giúp gì cho bạn?"),
     ]
 
-police_avatar_path = "assets/police_vietnam.png"
-human_avatar_path = "assets/human_vietnam.jpg"
-logo_path = "assets/logo.png"
+police_avatar_path = "img/police_vietnam.jpg"
+human_avatar_path = "img/human_vietnam.jpg"
 
-# Display the logo with the custom CSS class
-st.image(logo_path, width=100)
-
-
-st.markdown('<h2 class="centered-element">HỎI ĐÁP CUỘC THI</h1>', unsafe_allow_html=True)
-st.markdown('<h3 class="left-element">TÌM HIỂU PHÁP LUẬT VỀ CĂN CƯỚC, ĐỊNH DANH VÀ XÁC THỰC ĐIỆN TỬ CỦA VIỆT NAM</h2>',
-            unsafe_allow_html=True)
-
-
+components.html(html_content, height=200)
+st.markdown('<h2 class="centered-element">HỎI ĐÁP CUỘC THI</h2>', unsafe_allow_html=True)
+st.markdown(
+    '<h3 class="centered-element">TÌM HIỂU PHÁP LUẬT VỀ CĂN CƯỚC, ĐỊNH DANH VÀ XÁC THỰC ĐIỆN TỬ CỦA VIỆT NAM</h3>',
+    unsafe_allow_html=True)
 
 for message in st.session_state.conversation_history:
     if isinstance(message, AIMessage):
