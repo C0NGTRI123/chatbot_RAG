@@ -2,49 +2,49 @@ import streamlit as st
 from langchain_core.messages import AIMessage, HumanMessage
 from app.src.services.pdf_service import PDFService
 import openai
-import streamlit.components.v1 as components
-import base64
 
 
-def get_base64_image(image_path):
-    with open(image_path, "rb") as img_file:
-        return base64.b64encode(img_file.read()).decode()
+# def get_base64_image(image_path):
+#     with open(image_path, "rb") as img_file:
+#         return base64.b64encode(img_file.read()).decode()
+#
+#
+# background_image = get_base64_image("img/tg_image_1984667092.png")
+# overlay_image = get_base64_image("img/LOGO2.png")
 
-
-background_image = get_base64_image("img/tg_image_1984667092.png")
-overlay_image = get_base64_image("img/LOGO2.png")
-
-html_content = f"""
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        .image-container {{
-            position: relative;
-            display: inline-block;
-        }}
-        .image-container img {{
-            display: block;
-        }}
-        .overlay {{
-            position: absolute;
-            top: 0;
-            left: 0;
-            max-width: 462px;
-            margin-top: 20px;
-        }}
-    </style>
-</head>
-<body>
-    <div class="image-container">
-        <img src="data:image/png;base64,{background_image}" alt="Background Image">
-        <img src="data:image/png;base64,{overlay_image}" class="overlay" alt="Overlay Image">
-    </div>
-</body>
-</html>
-"""
+# html_content = f"""
+# <!DOCTYPE html>
+# <html lang="en">
+# <head>
+#     <meta charset="UTF-8">
+#     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+#     <style>
+#         .image-container {{
+#             position: relative;
+#             display: inline-block;
+#         }}
+#         .image-container img {{
+#             display: block;
+#             width: 50%;
+#             height: 50%;
+#         }}
+#         .overlay {{
+#             position: absolute;
+#             top: 0;
+#             left: 0;
+#             max-width: 231px;
+#             margin-top: 10px;
+#         }}
+#     </style>
+# </head>
+# <body>
+#     <div class="image-container">
+#         <img src="data:image/png;base64,{background_image}" alt="Background Image">
+#         <img src="data:image/png;base64,{overlay_image}" class="overlay" alt="Overlay Image">
+#     </div>
+# </body>
+# </html>
+# """
 
 # Create a css style for the chatbot
 center_elements_css = """
@@ -87,7 +87,7 @@ if "conversation_history" not in st.session_state:
 police_avatar_path = "img/police_vietnam.jpg"
 human_avatar_path = "img/human_vietnam.jpg"
 
-components.html(html_content, height=200)
+st.image("img/LOGO2.png")
 st.markdown('<h2 class="centered-element">HỎI ĐÁP CUỘC THI</h2>', unsafe_allow_html=True)
 st.markdown(
     '<h3 class="centered-element">TÌM HIỂU PHÁP LUẬT VỀ CĂN CƯỚC, ĐỊNH DANH VÀ XÁC THỰC ĐIỆN TỬ CỦA VIỆT NAM</h3>',
