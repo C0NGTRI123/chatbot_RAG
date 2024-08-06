@@ -1,11 +1,25 @@
 import streamlit as st
+from streamlit_extras.app_logo import add_logo
 
-police_avatar_path = "img/police_vietnam.jpg"
-human_avatar_path = "img/human_vietnam.jpg"
+st.set_page_config(page_title="Hỏi và đáp", page_icon=":speech_balloon:")
 
-st.image("img/LOGO2.png")
-st.markdown('<h2 class="centered-element">HỎI ĐÁP CUỘC THI</h2>', unsafe_allow_html=True)
+height = 120
+logo = "https://www.pixenli.com/image/fm0aEpMI"
+
 st.markdown(
-    '<h3 class="centered-element">TÌM HIỂU PHÁP LUẬT VỀ CĂN CƯỚC, ĐỊNH DANH VÀ XÁC THỰC ĐIỆN TỬ CỦA VIỆT NAM</h3>',
-    unsafe_allow_html=True)
+    f"""
+    <style>
+        [data-testid="stSidebarNav"] {{
+            background-image: url({logo});
+            background-repeat: no-repeat;
+            padding-top: {height - 40}px;
+            background-position: 20px 20px;
+        }}
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
 
+
+# with st.sidebar:
+#     st.image("https://www.pixenli.com/image/fm0aEpMI", width=150)

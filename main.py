@@ -3,7 +3,6 @@ from langchain_core.messages import AIMessage, HumanMessage
 from app.src.services.pdf_service import PDFService
 import openai
 
-
 # def get_base64_image(image_path):
 #     with open(image_path, "rb") as img_file:
 #         return base64.b64encode(img_file.read()).decode()
@@ -74,20 +73,15 @@ right_elements_css = """
 st.set_page_config(page_title="Hỏi và đáp", page_icon=":speech_balloon:")
 openai.api_key = st.secrets["OPENAI_API_KEY"]
 
-# Apply the CSS
-st.markdown(center_elements_css, unsafe_allow_html=True)
-st.markdown(left_elements_css, unsafe_allow_html=True)
-st.markdown(right_elements_css, unsafe_allow_html=True)
-
 if "conversation_history" not in st.session_state:
     st.session_state.conversation_history = [
-        AIMessage(content="Xin chào tôi là trợ lý thông minh. Tôi có thể giúp gì cho bạn?"),
+        AIMessage(content="Xin chào tôi là trợ lý thông minh. Bạn vui lòng đưa ra câu hỏi nhé?"),
     ]
 
 police_avatar_path = "img/police_vietnam.jpg"
 human_avatar_path = "img/human_vietnam.jpg"
 
-st.image("img/LOGO2.png")
+st.image("img/LOGO2.png", width=150)
 st.markdown('<h2 class="centered-element">HỎI ĐÁP CUỘC THI</h2>', unsafe_allow_html=True)
 st.markdown(
     '<h3 class="centered-element">TÌM HIỂU PHÁP LUẬT VỀ CĂN CƯỚC, ĐỊNH DANH VÀ XÁC THỰC ĐIỆN TỬ CỦA VIỆT NAM</h3>',
