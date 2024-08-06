@@ -65,9 +65,11 @@ if "conversation_history" not in st.session_state:
 st.markdown(html, unsafe_allow_html=True)
 police_avatar_path = "static/police_vietnam.jpg"
 human_avatar_path = "static/human_vietnam.jpg"
-logo_path = "./app/static/logo.png"
+logo_path = "static/logo.png"
+st.logo(logo_path)
+# logo_path = "./app/static/logo.png"
 # Add an image to the top left corner of the page
-st.markdown(f'<img src="{logo_path}" class="top-left-image" width="250" height="250">', unsafe_allow_html=True)
+# st.markdown(f'<img src="{logo_path}" class="top-left-image" width="250" height="250">', unsafe_allow_html=True)
 st.markdown('<h2 class="centered-element">HỎI ĐÁP CUỘC THI</h2>', unsafe_allow_html=True)
 st.markdown(
     '<h3 class="centered-element">TÌM HIỂU PHÁP LUẬT VỀ CĂN CƯỚC, ĐỊNH DANH VÀ</h3>',
