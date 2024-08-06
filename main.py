@@ -81,10 +81,13 @@ if "conversation_history" not in st.session_state:
 police_avatar_path = "img/police_vietnam.jpg"
 human_avatar_path = "img/human_vietnam.jpg"
 
-st.image("img/LOGO2.png", width=150)
+st.image("img/logo.png", width=150)
 st.markdown('<h2 class="centered-element">HỎI ĐÁP CUỘC THI</h2>', unsafe_allow_html=True)
 st.markdown(
-    '<h3 class="centered-element">TÌM HIỂU PHÁP LUẬT VỀ CĂN CƯỚC, ĐỊNH DANH VÀ XÁC THỰC ĐIỆN TỬ CỦA VIỆT NAM</h3>',
+    '<h3 class="centered-element">TÌM HIỂU PHÁP LUẬT VỀ CĂN CƯỚC, ĐỊNH DANH VÀ</h3>',
+    unsafe_allow_html=True)
+st.markdown(
+    '<h3 class="centered-element">XÁC THỰC ĐIỆN TỬ CỦA VIỆT NAM</h3>',
     unsafe_allow_html=True)
 
 for message in st.session_state.conversation_history:
