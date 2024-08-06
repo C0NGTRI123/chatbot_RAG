@@ -3,48 +3,6 @@ from langchain_core.messages import AIMessage, HumanMessage
 from app.src.services.pdf_service import PDFService
 import openai
 
-# def get_base64_image(image_path):
-#     with open(image_path, "rb") as img_file:
-#         return base64.b64encode(img_file.read()).decode()
-#
-#
-# background_image = get_base64_image("img/tg_image_1984667092.png")
-# overlay_image = get_base64_image("img/LOGO2.png")
-
-# html_content = f"""
-# <!DOCTYPE html>
-# <html lang="en">
-# <head>
-#     <meta charset="UTF-8">
-#     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-#     <style>
-#         .image-container {{
-#             position: relative;
-#             display: inline-block;
-#         }}
-#         .image-container img {{
-#             display: block;
-#             width: 50%;
-#             height: 50%;
-#         }}
-#         .overlay {{
-#             position: absolute;
-#             top: 0;
-#             left: 0;
-#             max-width: 231px;
-#             margin-top: 10px;
-#         }}
-#     </style>
-# </head>
-# <body>
-#     <div class="image-container">
-#         <img src="data:image/png;base64,{background_image}" alt="Background Image">
-#         <img src="data:image/png;base64,{overlay_image}" class="overlay" alt="Overlay Image">
-#     </div>
-# </body>
-# </html>
-# """
-
 # Create a css style for the chatbot
 center_elements_css = """
 <style>
@@ -70,6 +28,33 @@ right_elements_css = """
 </style>
 """
 
+html = """
+<style>
+.top-left-image {
+    position: absolute;
+    top: -60px;
+    left: -300px;
+    z-index: 1;
+}
+.centered-element {
+    text-align: center;
+}
+
+.centered-element-h2 {
+    text-align: center;
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+.centered-element-h3 {
+    text-align: center;
+    position: relative;
+    top: 0px;
+    left: 60px;
+}
+</style>
+"""
+
 st.set_page_config(page_title="Hỏi và đáp", page_icon=":speech_balloon:")
 openai.api_key = st.secrets["OPENAI_API_KEY"]
 
@@ -77,11 +62,12 @@ if "conversation_history" not in st.session_state:
     st.session_state.conversation_history = [
         AIMessage(content="Xin chào tôi là trợ lý thông minh. Bạn vui lòng đưa ra câu hỏi nhé?"),
     ]
-
-police_avatar_path = "img/police_vietnam.jpg"
-human_avatar_path = "img/human_vietnam.jpg"
-
-st.image("img/logo.png", width=150)
+st.markdown(html, unsafe_allow_html=True)
+police_avatar_path = "static/police_vietnam.jpg"
+human_avatar_path = "static/human_vietnam.jpg"
+logo_path = "./app/static/logo.png"
+# Add an image to the top left corner of the page
+st.markdown(f'<img src="{logo_path}" class="top-left-image" width="250" height="250">', unsafe_allow_html=True)
 st.markdown('<h2 class="centered-element">HỎI ĐÁP CUỘC THI</h2>', unsafe_allow_html=True)
 st.markdown(
     '<h3 class="centered-element">TÌM HIỂU PHÁP LUẬT VỀ CĂN CƯỚC, ĐỊNH DANH VÀ</h3>',

@@ -1,25 +1,45 @@
 import streamlit as st
-from streamlit_extras.app_logo import add_logo
 
 st.set_page_config(page_title="Hỏi và đáp", page_icon=":speech_balloon:")
 
-height = 120
-logo = "https://www.pixenli.com/image/fm0aEpMI"
+# Add a custom logo to the page base css
+html = """
+<style>
+.top-left-image {
+    position: absolute;
+    top: -60px;
+    left: -300px;
+    z-index: 1;
+}
+.centered-element {
+    text-align: center;
+}
 
+.centered-element-h2 {
+    text-align: center;
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+.centered-element-h3 {
+    text-align: center;
+    position: relative;
+    top: 0px;
+    left: 60px;
+}
+</style>
+"""
+
+# Apply the CSS
+st.markdown(html, unsafe_allow_html=True)
+
+logo_path = "./app/static/logo.png"
+# Add an image to the top left corner of the page
+st.markdown(f'<img src="{logo_path}" class="top-left-image" width="300" height="300">', unsafe_allow_html=True)
+st.markdown('<h2 class="centered-element">HỎI ĐÁP CUỘC THI</h2>', unsafe_allow_html=True)
 st.markdown(
-    f"""
-    <style>
-        [data-testid="stSidebarNav"] {{
-            background-image: url({logo});
-            background-repeat: no-repeat;
-            padding-top: {height - 40}px;
-            background-position: 20px 20px;
-        }}
-    </style>
-    """,
-    unsafe_allow_html=True,
-)
-
-
-# with st.sidebar:
-#     st.image("https://www.pixenli.com/image/fm0aEpMI", width=150)
+    '<h3 class="centered-element">TÌM HIỂU PHÁP LUẬT VỀ CĂN CƯỚC, ĐỊNH DANH VÀ</h3>',
+    unsafe_allow_html=True)
+st.markdown(
+    '<h3 class="centered-element">XÁC THỰC ĐIỆN TỬ CỦA VIỆT NAM</h3>',
+    unsafe_allow_html=True)
